@@ -1,0 +1,97 @@
+.recommendations {
+    width: 100%;
+    margin: 60px auto;
+    padding: auto 32px;
+    text-align: center;
+}
+
+.recommendation-list {
+    margin: 32px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+}
+
+/* Media Query untuk Responsivitas */
+@media (max-width: 700px) {
+    .recommendation-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+    .recommendation-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.recommendation-item {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #eeeae32a;
+    box-shadow: 0 4px 8px 0 #00000033;
+    transition: transform 0.2s;
+    /* Efek transisi */
+}
+
+.recommendation-item:hover {
+    transform: scale(1.02);
+}
+
+.recommendation-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.recommendation-content {
+    padding: 16px 32px 32px 32px;
+}
+.recommendation-content h2{
+    margin: 15px;
+}
+.recommendation-content h2 a {
+    padding: 12px;
+    text-decoration: none;
+    color: #9c7b5b;
+}
+
+.recommendation-content h2 a:hover {
+    color: #765d45;
+}
+
+
+.recommendation-rating {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(255, 128, 0);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 2px 5px #0000001a;
+    color: white;
+}
+
+.recommendation-rating .star {
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.rating-number {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.mdi--location {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7'/%3E%3C/svg%3E");
+    margin-right: 5px;
+}
